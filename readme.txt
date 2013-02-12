@@ -16,7 +16,7 @@ HOW TO USE:
 * Call the toasty() method on the element that will be clicked to show the toasty guy.
 
 EXAMPLE:
-<a id="toasty" href="#">Guess what?</a>
+<a id="toasty" href="#">Ka-ching!</a>
 
 <script>
   $("#toasty").Toasty();
