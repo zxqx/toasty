@@ -6,6 +6,8 @@
       e.preventDefault();
       $("#toasty-sound")[0].play();
 
+      $("body").css("overflow-x", "hidden");
+
       $("#toasty-guy").show().animate({
         right: "0",
         queue: true,
@@ -14,6 +16,7 @@
         queue: true
       }, 350, function() {
         $(this).hide();
+        $("body").css("overflow-x", "auto");
       });
     });
 
