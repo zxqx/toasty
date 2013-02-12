@@ -2,6 +2,9 @@
 Toasty.js
 -----------------
 
+DEMO:
+https://dl.dropbox.com/u/21334841/toasty.js/demo.html
+
 SUMMARY:
 * A jQuery plugin that shows the Mortal Kombat toasty guy!
 
