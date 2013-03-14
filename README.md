@@ -1,8 +1,5 @@
 # Toasty.js
 
-### Demo
-https://dl.dropbox.com/u/21334841/toasty.js/demo.html
-
 ### Summary
 A jQuery plugin that shows the Mortal Kombat toasty guy!
 
@@ -15,11 +12,14 @@ A jQuery plugin that shows the Mortal Kombat toasty guy!
 
 ### Example
 ```html
-<a id="toasty" href="#">Ka-ching!</a>
+<a id="toasty" href="#">Click me!</a>
 ```
 
 ```js
 <script>
-  $("#toasty").Toasty();
+  $("#toasty").toasty();
 </script>
 ```
+
+### Demo
+[Toasty.js](http://nhx.io/demos/toasty)

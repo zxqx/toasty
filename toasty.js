@@ -1,5 +1,5 @@
 (function($) {
-  $.fn.Toasty = function() {
+  $.fn.toasty = function() {
     $("<div id='toasty-guy' style='position: absolute; bottom: 0; right: -296px; width: 296px; height: 287px; background: url(images/toasty.png) no-repeat; display: none;'></div><audio id='toasty-sound' preload='auto'><source src='audio/toasty.mp3' type='audio/mp3' /><source src='audio/toasty.ogg' type='audio/ogg' /></audio>").appendTo("body");
 
     this.click(function(e) {
