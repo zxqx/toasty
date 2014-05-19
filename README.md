@@ -7,19 +7,17 @@ A jQuery plugin that shows the Mortal Kombat toasty guy!
 + jQuery
 
 ### How to Use
-1. Add the toasty.js file, along with the audio and images, to your site's root directory.
+1. Add the toasty.js file along with the audio and images to your site.
 1. Call the `toasty()` method on the element that will be clicked to show the toasty guy.
 
 ### Example
 ```html
-<a id="toasty" href="#">Click me!</a>
+<a class="toasty" href="#">Click me!</a>
 ```
 
 ```js
-<script>
-  $("#toasty").toasty();
-</script>
+$('.toasty').toasty();
 ```
 
 ### Demo
-[Toasty.js](http://nhx.io/demos/toasty)
+[Toasty!](http://nhx.io/demos/toasty)
