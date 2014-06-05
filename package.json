@@ -1,5 +1,5 @@
 {
-  "name": "toasty!",
+  "name": "mk-toasty",
   "version": "0.0.0",
   "description": "Add the Mortal Kombat toasty guy to your site or app",
   "main": "index.js",
