@@ -1,5 +1,5 @@
 # mk-toasty
-A JS script that shows the Mortal Kombat toasty guy.
+Make the Mortal Kombat toasty guy pop out on your site or web app.
 
 ## Installation
 

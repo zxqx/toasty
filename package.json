@@ -1,7 +1,7 @@
 {
   "name": "mk-toasty",
   "version": "0.0.0",
-  "description": "Add the Mortal Kombat toasty guy to your site or app",
+  "description": "Make the Mortal Kombat toasty guy pop out on your site or web app.",
   "main": "index.js",
   "dependencies": {
     "css-transition": "0.0.2"
