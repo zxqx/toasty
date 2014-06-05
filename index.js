@@ -30,11 +30,11 @@ Toasty.prototype.add = function()
 
 Toasty.prototype.addAudio = function()
 {
-  this.audio = document.createElement('audio');
-  this.audio.setAttribute('preload', 'auto');
-  this.audio.innerHTML = Toasty.AUDIO;
+  var a = this.audio = document.createElement('audio');
+  a.setAttribute('preload', 'auto');
+  a.innerHTML = Toasty.AUDIO;
 
-  document.body.appendChild(this.audio);
+  document.body.appendChild(a);
 };
 
 Toasty.prototype.addToastyGuy = function()
