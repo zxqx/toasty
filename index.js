@@ -31,7 +31,6 @@ Toasty.prototype.add = function()
 Toasty.prototype.addAudio = function()
 {
   this.audio = document.createElement('audio');
-  this.audio.id = 'toasty-sound';
   this.audio.setAttribute('preload', 'auto');
   this.audio.innerHTML = Toasty.AUDIO;
 
