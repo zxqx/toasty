@@ -1,0 +1,32 @@
+{
+  "name": "toasty",
+  "version": "0.0.0",
+  "description": "Add the Mortal Kombat toasty guy to your site or app",
+  "main": "index.js",
+  "dependencies": {
+    "css-transition": "0.0.2"
+  },
+  "devDependencies": {
+    "brfs": "^1.1.1",
+    "browserify": "^4.1.8"
+  },
+  "keywords": [
+    "toasty",
+    "mortal kombat",
+    "easter egg",
+    "secret"
+  ],
+  "scripts": {
+    "build": "browserify -t brfs index.js > dist/toasty.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zakangelle/toastyjs.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zakangelle/toastyjs/issues"
+  },
+  "homepage": "https://github.com/zakangelle/toastyjs"
+}
