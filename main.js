@@ -1,2 +1,4 @@
 var Toasty = require('./index.js');
-new Toasty('#toasty');
+
+var toasty = new Toasty('#toasty');
+toasty.add();

@@ -13,14 +13,12 @@ function Toasty(el)
   this.toastyGuy = null;
 
   this.triggerElement = document.querySelector(el);
-
-  this.init();
 }
 
-Toasty.prototype.init = function()
+Toasty.prototype.add = function()
 {
   if (this._started)
-    throw new Error('Toasty cannot be initialized more than once');
+    throw new Error('Toasty guy already triggered by this element');
 
   this._started = true;
 
