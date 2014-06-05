@@ -1,5 +1,5 @@
 # mk-toasty
-Make the Mortal Kombat toasty guy pop out on your site
+Make the Mortal Kombat toasty guy pop out on your site.
 
 ## Installation
 
