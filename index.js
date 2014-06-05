@@ -70,9 +70,8 @@ Toasty.prototype.show = function()
 
   // Slide that piece of shit in
   var self = this;
-  css(this.toastyGuy, {
-    right: 0
-  }, 350, function() {
+  css(this.toastyGuy, { right: 0 }, 350,
+  function() {
     setTimeout(function() {
       self.hide();
     }, 500);
@@ -82,9 +81,8 @@ Toasty.prototype.show = function()
 Toasty.prototype.hide = function()
 {
   var self = this;
-  css(this.toastyGuy, {
-    right: '-296px',
-  }, 400, function() {
+  css(this.toastyGuy, { right: '-296px' }, 400,
+  function() {
     document.body.style.overflowX = self.origOverflowX; 
   });
 };
