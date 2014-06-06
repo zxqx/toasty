@@ -6,6 +6,11 @@ var css = require('css-transition');
 Toasty.AUDIO      = fs.readFileSync(__dirname + '/partials/audio.html');
 Toasty.TOASTY_GUY = fs.readFileSync(__dirname + '/partials/toasty.img');
 
+/**
+ * Hold a reference to the audio, image, and trigger element 
+ * @constructor
+ * @param {string} el DOM selector
+ */
 function Toasty(el)
 {
   this._started  = false;
@@ -15,6 +20,9 @@ function Toasty(el)
   this.triggerElement = document.querySelector(el);
 }
 
+/**
+ * Set up audio, image, and click handler 
+ */
 Toasty.prototype.add = function()
 {
   if (this._started)
@@ -28,6 +36,9 @@ Toasty.prototype.add = function()
   this.triggerElement.onclick = this.onClick.bind(this);
 };
 
+/**
+ * Create an audio element and add it to the DOM
+ */
 Toasty.prototype.addAudio = function()
 {
   var a = this.audio = document.createElement('audio');
@@ -37,6 +48,9 @@ Toasty.prototype.addAudio = function()
   document.body.appendChild(a);
 };
 
+/**
+ * Create a toasty guy image with all the necessary styles and add it to the DOM
+ */
 Toasty.prototype.addToastyGuy = function()
 {
   var tg = this.toastyGuy = document.createElement('img');
@@ -52,12 +66,18 @@ Toasty.prototype.addToastyGuy = function()
   document.body.appendChild(this.toastyGuy);
 };
 
+/**
+ * Proxy click event through and prevent default click action
+ */
 Toasty.prototype.onClick = function()
 {
   this.show();
   return false;
 };
 
+/**
+ * Play the audio and animate toasty guy into the visible viewport
+ */
 Toasty.prototype.show = function()
 {
   this.audio.play();
@@ -78,6 +98,9 @@ Toasty.prototype.show = function()
   });
 };
 
+/**
+ * Slide toasty guy back and reset the body overflow-x CSS prop to its original value
+ */
 Toasty.prototype.hide = function()
 {
   var self = this;
