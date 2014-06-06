@@ -1,5 +1,8 @@
 # mk-toasty
+
 Make the Mortal Kombat toasty guy pop out on your site.
+
+![Toasty Guy](http://nhx.io/demos/toasty/images/toasty.png)
 
 ## Installation
 
