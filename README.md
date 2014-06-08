@@ -25,7 +25,7 @@ $ npm run build
 
 **JS**:
 ```js
-var Toasty = require('toasty!');
+var Toasty = require('mk-toasty');
 
 var toasty = new Toasty('.toasty');
 toasty.add();
