@@ -17,7 +17,8 @@
     "secret"
   ],
   "scripts": {
-    "build": "browserify -t brfs index.js > dist/toasty.js"
+    "build": "mkdir -p dist && browserify -t brfs index.js > dist/toasty.js",
+    "example": "mkdir -p example/dist && browserify -t brfs example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html && cp -r audio example/dist/audio"
   },
   "repository": {
     "type": "git",
