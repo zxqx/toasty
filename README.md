@@ -12,19 +12,18 @@ $ npm install mk-toasty
 
 ## Usage
 
-**HTML**:
-
-```html
-<button class="toasty">Click me!</button>
-```
-
 **JS**:
 
 ```js
 import Toasty from 'mk-toasty';
 
-var toasty = new Toasty('.toasty');
-toasty.add();
+toasty('.toasty');
+```
+
+**HTML**:
+
+```html
+<button class="toasty">Click me!</button>
 ```
 
 ## Example
