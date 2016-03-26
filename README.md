@@ -15,7 +15,7 @@ $ npm install mk-toasty
 **JS**:
 
 ```js
-import Toasty from 'mk-toasty';
+import toasty from 'mk-toasty';
 
 toasty('.toasty');
 ```
