@@ -10,6 +10,8 @@ Make the Mortal Kombat toasty guy pop out on your site.
 $ npm install mk-toasty
 ```
 
+[See demo](https://dl.dropboxusercontent.com/u/21334841/demos/mk-toasty/index.html)
+
 ## Usage
 
 **JS**:
@@ -25,6 +27,8 @@ toasty('.toasty');
 ```html
 <button class="toasty">Click me!</button>
 ```
+
+Copy `audio` folder to be adjacent to the entry point script in your project.
 
 ## Example
 
