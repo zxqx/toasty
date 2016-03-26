@@ -2,7 +2,7 @@
 
 Make the Mortal Kombat toasty guy pop out on your site.
 
-![Toasty Guy](https://www.dropbox.com/s/h7zo1d5g57vjdv9/mk-toasty.png?raw=1)
+<img src='https://www.dropbox.com/s/h7zo1d5g57vjdv9/mk-toasty.png?raw=1' width='300px' />
 
 ## Installation
 
