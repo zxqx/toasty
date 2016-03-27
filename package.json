@@ -3,31 +3,27 @@
   "version": "2.0.5",
   "description": "Make the Mortal Kombat toasty guy pop out on your site.",
   "main": "index.js",
-  "dependencies": {
-    "css-transition": "0.0.2"
-  },
-  "devDependencies": {
-    "brfs": "^1.1.1",
-    "browserify": "^4.1.8"
-  },
-  "keywords": [
-    "toasty",
-    "mortal kombat",
-    "easter egg",
-    "secret"
-  ],
   "scripts": {
     "build": "mkdir -p dist && browserify -t brfs index.js > dist/toasty.js",
     "example": "mkdir -p example/dist && browserify -t brfs example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html && cp -r audio example/dist/audio"
   },
+  "keywords": [
+    "toasty",
+    "mortal",
+    "kombat",
+    "secret"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/zakangelle/mk-toasty.git"
   },
   "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zakangelle/mk-toasty/issues"
+  "dependencies": {
+    "css-transition": "0.0.2"
   },
-  "homepage": "https://github.com/zakangelle/mk-toasty"
+  "devDependencies": {
+    "brfs": "^1.1.1",
+    "browserify": "^4.1.8"
+  }
 }
