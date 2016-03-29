@@ -11,13 +11,15 @@
     "toasty",
     "mortal",
     "kombat",
-    "secret"
+    "secret",
+    "easter",
+    "egg"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/zakangelle/mk-toasty.git"
   },
-  "author": "",
+  "author": "Zak Angelle",
   "license": "MIT",
   "dependencies": {
     "css-transition": "0.0.2"
