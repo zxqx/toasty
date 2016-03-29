@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "mkdir -p dist && browserify -t brfs index.js > dist/toasty.js",
-    "example": "mkdir -p example/dist && browserify -t brfs example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html && cp -r audio example/dist/audio"
+    "example": "mkdir -p example/dist && browserify -t brfs example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html"
   },
   "keywords": [
     "toasty",

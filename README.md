@@ -28,8 +28,6 @@ toasty('.toasty');
 <button class="toasty">Click me!</button>
 ```
 
-Copy `audio` folder to be adjacent to the entry point script in your project.
-
 ## Example
 
 Generate an example in `example/dist`:
