@@ -38,7 +38,9 @@ Generate an example in `example/dist`:
 $ npm run example
 ```
 
-## Build
+## Standalone
+
+Generate a standalone build (for use with `<script>` tags and AMD module loaders):
 
 ```sh
 $ npm run build
