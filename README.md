@@ -43,5 +43,5 @@ $ npm run example
 Generate a standalone build (for use with `<script>` tags and AMD module loaders):
 
 ```sh
-$ npm run build
+$ npm run build:standalone
 ```
