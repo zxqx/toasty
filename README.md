@@ -40,7 +40,7 @@ $ npm run example
 
 ## Standalone
 
-Generate a standalone build (for use with `<script>` tags and AMD module loaders):
+Generate a standalone build in `dist` (for use with `<script>` tags and AMD module loaders):
 
 ```sh
 $ npm run build:standalone
