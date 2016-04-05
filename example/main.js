@@ -1,3 +1,3 @@
-var toasty = require('../index.js');
+const toasty = require('../index.js');
 
 toasty('.toasty');
