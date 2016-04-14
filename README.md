@@ -2,6 +2,8 @@
 
 Make the Mortal Kombat toasty guy pop out on your site.
 
+[![Build Status](https://travis-ci.org/zakangelle/mk-toasty.svg?branch=master)](https://travis-ci.org/zakangelle/mk-toasty)
+
 <a href="https://dl.dropboxusercontent.com/u/21334841/demos/mk-toasty/index.html">
   <img src='https://www.dropbox.com/s/h7zo1d5g57vjdv9/mk-toasty.png?raw=1' width='300px' />
 </a>
