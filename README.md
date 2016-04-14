@@ -45,3 +45,11 @@ Generate a standalone build in `dist` (for use with `<script>` tags and AMD modu
 ```sh
 $ npm run build:standalone
 ```
+
+## Test
+
+Tests are done with [karma](https://karma-runner.github.io) and [chai](http://chaijs.com/) by running:
+
+```
+$ npm test
+```
