@@ -10,9 +10,6 @@ module.exports = function(config) {
       'test/*.js'
     ],
 
-    exclude: [
-    ],
-
     preprocessors: {
       'test/*.js': [ 'browserify' ],
       'lib/*.js': [ 'browserify' ],
@@ -35,19 +32,8 @@ module.exports = function(config) {
 
     browsers: ['Chrome'],
 
-    customLaunchers: {
-      Chrome_travis_ci: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
-
     singleRun: false
   };
-
-  if (process.env.TRAVIS) {
-    configuration.browsers = ['Chrome_travis_ci'];
-  }
 
   config.set(configuration);
 };
