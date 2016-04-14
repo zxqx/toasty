@@ -6,7 +6,8 @@
   "scripts": {
     "build": "mkdir -p dist && browserify -t brfs index.js > dist/toasty.js",
     "build:standalone": "mkdir -p dist && browserify -t brfs index.js --standalone toasty > dist/toasty.js",
-    "example": "mkdir -p example/dist && browserify -t brfs example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html"
+    "example": "mkdir -p example/dist && browserify -t brfs example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html",
+    "test": "karma start"
   },
   "keywords": [
     "toasty",
@@ -27,6 +28,14 @@
   },
   "devDependencies": {
     "brfs": "^1.1.1",
-    "browserify": "^13.0.0"
+    "browserify": "^13.0.0",
+    "chai": "^3.5.0",
+    "karma": "^0.13.22",
+    "karma-browserify": "^5.0.3",
+    "karma-cli": "^0.1.2",
+    "karma-mocha": "^0.2.2",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
+    "watchify": "^3.7.0"
   }
 }
