@@ -6,7 +6,7 @@ const Toasty = require('../lib/Toasty.js');
 let container = document.createElement('div');
 container.classList.add('toasty');
 
-describe('basics', () => {
+describe('toasty setup', () => {
   before(() => {
     document.body.appendChild(container);
   });
