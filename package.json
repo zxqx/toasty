@@ -4,8 +4,8 @@
   "description": "Make the Mortal Kombat toasty guy pop out on your site.",
   "main": "index.js",
   "scripts": {
-    "build": "mkdir -p dist && browserify -t brfs index.js > dist/toasty.js",
-    "build:standalone": "mkdir -p dist && browserify -t brfs index.js --standalone toasty > dist/toasty.js",
+    "build": "mkdir -p dist && browserify -t brfs -t es6-arrow-function index.js > dist/toasty.js",
+    "build:standalone": "mkdir -p dist && browserify -t brfs -t es6-arrow-function index.js --standalone toasty > dist/toasty.js",
     "example": "mkdir -p example/dist && browserify -t brfs -t es6-arrow-function example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html",
     "test": "karma start test/karma.conf.js",
     "test:once": "karma start test/karma.conf.js --single-run"
