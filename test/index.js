@@ -4,14 +4,20 @@ const sinon = require('sinon');
 const toasty = require('../index.js');
 const Toasty = require('../lib/Toasty.js');
 
-let container = document.createElement('div');
-container.classList.add('toasty');
-document.body.appendChild(container);
-let instance = toasty('.toasty');
+let container;
+let instance;
 
 describe('toasty setup', () => {
-  after(() => {
+  beforeEach(() => {
+    container = document.createElement('div');
+    container.classList.add('toasty');
+    document.body.appendChild(container);
+    instance = toasty('.toasty');
+  });
+
+  afterEach(() => {
     document.body.removeChild(container);
+    instance.destroy();
   });
 
   it('should initialize toasty plugin', () => {
@@ -37,7 +43,8 @@ describe('toasty setup', () => {
   });
 
   it('should slide out toasty guy', () => {
-    return instance.slideOut()
+    return instance.slideIn()
+      .then(() => instance.slideOut())
       .then(() => {
         let toastyGuy = document.querySelector('img');
         expect(toastyGuy.style.right).to.not.eql('0px');
