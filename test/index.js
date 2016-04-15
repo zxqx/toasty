@@ -64,21 +64,20 @@ describe('toasty setup', () => {
     let el = document.querySelector('.toasty');
     let spy = sinon.spy(instance, 'slideOut');
 
-    return instance.init().then(() => sinon.assert.called(spy));
+    return instance.trigger().then(() => sinon.assert.called(spy));
   });
 
   it('should restore original body overflow-x value', () => {
     let el = document.querySelector('.toasty');
     let origOverflowX = document.body.style.overflowX;
-    return instance.init()
+    return instance.trigger()
       .then(() => {
         expect(document.body.style.overflowX).to.eql(origOverflowX);
       });
   });
 
-  it('should allow direct init', () => {
-    let spy = sinon.spy(Toasty.prototype, 'init');
-    toasty();
-    sinon.assert.called(spy);
+  it('should allow boot without element', () => {
+    let t = toasty();
+    expect(t.element).to.be.undefined;
   });
 });

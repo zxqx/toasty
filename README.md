@@ -32,12 +32,13 @@ toasty('.toasty');
 <button class="toasty">Click me!</button>
 ```
 
-or just directly initialize it:
+or just trigger it directly:
 
 ```js
 import toasty from 'mk-toasty';
 
-toasty();
+let t = toasty();
+t.trigger();
 ```
 
 ## Example
