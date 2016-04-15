@@ -1,22 +1,20 @@
-const expect = require('chai').expect;
+const chai = require('chai');
+const expect = chai.expect;
 const sinon = require('sinon');
 const toasty = require('../index.js');
 const Toasty = require('../lib/Toasty.js');
 
 let container = document.createElement('div');
 container.classList.add('toasty');
+document.body.appendChild(container);
+let instance = toasty('.toasty');
 
 describe('toasty setup', () => {
-  before(() => {
-    document.body.appendChild(container);
-  });
-
   after(() => {
     document.body.removeChild(container);
   });
 
   it('should initialize toasty plugin', () => {
-    let instance = toasty('.toasty');
     expect(instance instanceof Toasty).to.be.true;
   });
 
@@ -31,25 +29,22 @@ describe('toasty setup', () => {
   });
 
   it('should slide in toasty guy', () => {
-    let instance = toasty('.toasty');
-    instance.slideIn()
+    return instance.slideIn()
       .then(() => {
         let toastyGuy = document.querySelector('img');
-        expect(toastyGuy.style.right).to.eql(0);
+        expect(toastyGuy.style.right).to.eql('0px');
       });
   });
 
   it('should slide out toasty guy', () => {
-    let instance = toasty('.toasty');
-    instance.slideOut()
+    return instance.slideOut()
       .then(() => {
         let toastyGuy = document.querySelector('img');
-        expect(toastyGuy.style.right).to.eql(`-${toastyGuy.offsetWidth}px`);
+        expect(toastyGuy.style.right).to.not.eql('0px');
       });
   });
 
   it('should play sound when element is clicked', () => {
-    let instance = toasty('.toasty');
     let el = document.querySelector('.toasty');
     let spy = sinon.spy(instance, 'playSound');
 
@@ -58,7 +53,6 @@ describe('toasty setup', () => {
   });
 
   it('should slide in toasty guy when element is clicked', () => {
-    let instance = toasty('.toasty');
     let el = document.querySelector('.toasty');
     let spy = sinon.spy(instance, 'slideIn');
 
@@ -67,7 +61,6 @@ describe('toasty setup', () => {
   });
 
   it('should slide out toasty guy after delay', () => {
-    let instance = toasty('.toasty');
     let el = document.querySelector('.toasty');
     let spy = sinon.spy(instance, 'slideOut');
 
