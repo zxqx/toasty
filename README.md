@@ -2,9 +2,7 @@
 
 Make the Mortal Kombat toasty guy pop out on your site.
 
-[![Circle CI](https://circleci.com/gh/zakangelle/mk-toasty/tree/master.svg?style=shield)](https://circleci.com/gh/zakangelle/mk-toasty/tree/master)
-
-[![See Demo](https://img.shields.io/badge/see-demo-green.svg)](https://dl.dropboxusercontent.com/u/21334841/demos/mk-toasty/index.html)
+[![Circle CI](https://circleci.com/gh/zakangelle/mk-toasty/tree/master.svg?style=shield)](https://circleci.com/gh/zakangelle/mk-toasty/tree/master) [![See Demo](https://img.shields.io/badge/see-demo-green.svg)](https://dl.dropboxusercontent.com/u/21334841/demos/mk-toasty/index.html)
 
 <a href="https://dl.dropboxusercontent.com/u/21334841/demos/mk-toasty/index.html">
   <img src='https://www.dropbox.com/s/h7zo1d5g57vjdv9/mk-toasty.png?raw=1' width='300px' />
