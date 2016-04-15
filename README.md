@@ -18,6 +18,8 @@ $ npm install mk-toasty
 
 ## Usage
 
+Show it when a certain element is clicked:
+
 **JS**:
 
 ```js
@@ -30,6 +32,14 @@ toasty('.toasty');
 
 ```html
 <button class="toasty">Click me!</button>
+```
+
+or just directly initialize it:
+
+```js
+import toasty from 'mk-toasty';
+
+toasty();
 ```
 
 ## Example
