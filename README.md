@@ -16,7 +16,7 @@ $ npm install mk-toasty
 
 ## Usage
 
-Show it when a certain element is clicked:
+Show toasty guy when a certain element is clicked:
 
 **JS**:
 
