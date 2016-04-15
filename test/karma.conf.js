@@ -11,13 +11,13 @@ module.exports = function(config) {
     ],
 
     preprocessors: {
-      '../test/*.js': [ 'browserify' ],
-      '../lib/*.js': [ 'browserify' ],
-      '../index.js': [ 'browserify' ]
+      '../index.js': ['browserify'],
+      '../lib/*.js': ['browserify'],
+      '../test/*.js': ['browserify']
     },
 
     browserify: {
-      transform: [ 'brfs' ]
+      transform: ['brfs']
     },
 
     reporters: ['progress'],
