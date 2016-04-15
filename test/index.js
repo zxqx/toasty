@@ -52,6 +52,7 @@ describe('toasty setup', () => {
     let instance = toasty('.toasty');
     let el = document.querySelector('.toasty');
     let spy = sinon.spy(instance, 'playSound');
+
     el.click();
     sinon.assert.called(spy);
   });
@@ -60,6 +61,7 @@ describe('toasty setup', () => {
     let instance = toasty('.toasty');
     let el = document.querySelector('.toasty');
     let spy = sinon.spy(instance, 'slideIn');
+
     el.click();
     sinon.assert.called(spy);
   });
@@ -68,8 +70,14 @@ describe('toasty setup', () => {
     let instance = toasty('.toasty');
     let el = document.querySelector('.toasty');
     let spy = sinon.spy(instance, 'slideOut');
-    el.click();
 
+    el.click();
     setTimeout(() => sinon.assert.called(spy), 2000);
+  });
+
+  it('should allow direct init', () => {
+    let spy = sinon.spy(Toasty.prototype, 'init');
+    toasty();
+    sinon.assert.called(spy);
   });
 });
