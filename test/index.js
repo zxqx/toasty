@@ -1,8 +1,11 @@
 const chai = require('chai');
+const chaiAsPromised = require('chai-as-promised');
 const expect = chai.expect;
 const sinon = require('sinon');
 const toasty = require('../index.js');
 const Toasty = require('../lib/Toasty.js');
+
+chai.use(chaiAsPromised);
 
 let container;
 let instance;
@@ -83,8 +86,20 @@ describe('toasty setup', () => {
       });
   });
 
+  it('should short circuit trigger if in progress', () => {
+    instance.trigger();
+    return expect(instance.trigger()).to.eventually.be.rejected;
+  });
+
   it('should allow boot without element', () => {
     let t = toasty();
     expect(t.element).to.be.undefined;
+  });
+
+  it('should destroy instance', () => {
+    instance.destroy();
+
+    expect(instance.toastyGuy).to.be.null;
+    expect(instance.audio).to.be.null;
   });
 });
