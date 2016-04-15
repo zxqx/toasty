@@ -54,9 +54,9 @@ describe('toasty setup', () => {
       });
   });
 
-  it('should play sound when element is clicked', () => {
+  it('should play audio when element is clicked', () => {
     let el = document.querySelector('.toasty');
-    let spy = sinon.spy(instance, 'playSound');
+    let spy = sinon.spy(instance, 'playAudio');
 
     el.click();
     sinon.assert.called(spy);
