@@ -6,7 +6,7 @@
   "scripts": {
     "build": "mkdir -p dist && browserify -t brfs index.js > dist/toasty.js",
     "build:standalone": "mkdir -p dist && browserify -t brfs index.js --standalone toasty > dist/toasty.js",
-    "example": "mkdir -p example/dist && browserify -t brfs example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html",
+    "example": "mkdir -p example/dist && browserify -t brfs -t es6-arrow-function example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html",
     "test": "karma start test/karma.conf.js",
     "test:once": "karma start test/karma.conf.js --single-run"
   },
@@ -32,6 +32,7 @@
     "browserify": "^13.0.0",
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
+    "es6-arrow-function": "^0.6.6",
     "karma": "^0.13.22",
     "karma-browserify": "^5.0.3",
     "karma-chrome-launcher": "^0.2.3",
