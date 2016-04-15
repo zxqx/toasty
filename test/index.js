@@ -64,8 +64,7 @@ describe('toasty setup', () => {
     let el = document.querySelector('.toasty');
     let spy = sinon.spy(instance, 'slideOut');
 
-    el.click();
-    setTimeout(() => sinon.assert.called(spy), 2000);
+    return instance.init().then(() => sinon.assert.called(spy));
   });
 
   it('should restore original body overflow-x value', () => {
