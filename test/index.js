@@ -102,4 +102,9 @@ describe('toasty setup', () => {
     expect(instance.toastyGuy).to.be.null;
     expect(instance.audio).to.be.null;
   });
+
+  it('should allow for multiple destroys', () => {
+    instance.destroy();
+    expect(instance.destroy.bind(instance)).to.not.throw(Error);
+  });
 });
