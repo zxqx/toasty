@@ -1,8 +1,17 @@
+var istanbul = require('browserify-istanbul');
+
 module.exports = function(config) {
   var configuration = {
     basePath: '',
 
     frameworks: ['mocha', 'browserify'],
+
+    plugins: [
+      'karma-coverage',
+      'karma-mocha',
+      'karma-browserify',
+      'karma-chrome-launcher'
+    ],
 
     files: [
       '../index.js',
@@ -17,10 +26,22 @@ module.exports = function(config) {
     },
 
     browserify: {
-      transform: ['brfs']
+      transform: ['brfs', istanbul(
+        {
+          instrumenterConfig: { embedSource: true }
+        }
+      )]
     },
 
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
+
+    coverageReporter: {
+      dir : 'coverage/',
+      reporters: [
+        { type: 'html', subdir: 'html' },
+        { type: 'lcovonly', subdir: 'lcov' }
+      ]
+    },
 
     port: 9876,
 
