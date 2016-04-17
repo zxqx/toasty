@@ -10,7 +10,8 @@ module.exports = function(config) {
       'karma-coverage',
       'karma-mocha',
       'karma-browserify',
-      'karma-chrome-launcher'
+      'karma-chrome-launcher',
+      'karma-firefox-launcher'
     ],
 
     files: [
@@ -48,7 +49,7 @@ module.exports = function(config) {
 
     autoWatch: true,
 
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'Firefox'],
 
     singleRun: false
   };
