@@ -1,4 +1,4 @@
-var istanbul = require('browserify-istanbul');
+const istanbul = require('browserify-istanbul');
 
 module.exports = function(config) {
   var configuration = {
@@ -26,11 +26,9 @@ module.exports = function(config) {
     },
 
     browserify: {
-      transform: ['brfs', istanbul(
-        {
-          instrumenterConfig: { embedSource: true }
-        }
-      )]
+      transform: ['brfs', istanbul({
+        instrumenterConfig: { embedSource: true }
+      })]
     },
 
     reporters: ['progress', 'coverage'],
@@ -38,7 +36,6 @@ module.exports = function(config) {
     coverageReporter: {
       dir : 'coverage/',
       reporters: [
-        { type: 'html', subdir: 'html' },
         { type: 'lcovonly', subdir: 'lcov' }
       ]
     },
