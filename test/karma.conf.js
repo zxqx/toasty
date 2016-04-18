@@ -2,20 +2,20 @@ const istanbul = require('browserify-istanbul');
 
 module.exports = function(config) {
   var configuration = {
-    basePath: '',
+    basePath: '../',
 
     frameworks: ['mocha', 'browserify'],
 
     files: [
-      '../index.js',
-      '../lib/*.js',
-      '../test/*.js'
+      './index.js',
+      './lib/*.js',
+      './test/*.js'
     ],
 
     preprocessors: {
-      '../index.js': ['browserify'],
-      '../lib/*.js': ['browserify'],
-      '../test/*.js': ['browserify']
+      './index.js': ['browserify'],
+      './lib/*.js': ['browserify'],
+      './test/*.js': ['browserify']
     },
 
     browserify: {
