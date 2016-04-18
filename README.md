@@ -1,17 +1,17 @@
-# mk-toasty
+# toasty
 
 Make the Mortal Kombat toasty guy pop out on your site.
 
-[![Circle CI](https://circleci.com/gh/zakangelle/mk-toasty/tree/master.svg?style=shield)](https://circleci.com/gh/zakangelle/mk-toasty/tree/master) [![Coverage Status](https://img.shields.io/coveralls/zakangelle/mk-toasty.svg)](https://coveralls.io/github/zakangelle/mk-toasty?branch=master) [![See Demo](https://img.shields.io/badge/see-demo-8c568b.svg)](https://dl.dropboxusercontent.com/u/21334841/demos/mk-toasty/index.html)
+[![Circle CI](https://circleci.com/gh/zakangelle/toasty/tree/master.svg?style=shield)](https://circleci.com/gh/zakangelle/toasty/tree/master) [![Coverage Status](https://img.shields.io/coveralls/zakangelle/toasty.svg)](https://coveralls.io/github/zakangelle/toasty?branch=master) [![See Demo](https://img.shields.io/badge/see-demo-8c568b.svg)](https://dl.dropboxusercontent.com/u/21334841/demos/toasty/index.html)
 
-<a href="https://dl.dropboxusercontent.com/u/21334841/demos/mk-toasty/index.html">
-  <img src='https://www.dropbox.com/s/h7zo1d5g57vjdv9/mk-toasty.png?raw=1' width='280px' />
+<a href="https://dl.dropboxusercontent.com/u/21334841/demos/toasty/index.html">
+  <img src='https://www.dropbox.com/s/h7zo1d5g57vjdv9/toasty.png?raw=1' width='280px' />
 </a>
 
 ## Installation
 
 ```sh
-$ npm install mk-toasty
+$ npm install toasty
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ Show toasty guy when a certain element is clicked:
 **JS**:
 
 ```js
-import toasty from 'mk-toasty';
+import toasty from 'toasty';
 
 toasty('.toasty');
 ```
@@ -35,7 +35,7 @@ toasty('.toasty');
 or just trigger it directly:
 
 ```js
-import toasty from 'mk-toasty';
+import toasty from 'toasty';
 
 let t = toasty();
 t.trigger();
