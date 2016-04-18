@@ -59,7 +59,7 @@ $ npm run build:standalone
 
 ## Test
 
-Run tests with [karma](https://karma-runner.github.io) and [chai](http://chaijs.com/):
+Run tests with [karma](https://karma-runner.github.io) and [mocha](https://mochajs.org/):
 
 ```
 $ npm test
