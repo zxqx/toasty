@@ -9,7 +9,7 @@
     "example": "mkdir -p example/dist && browserify -t es6-arrow-function example/main.js > example/dist/main.js && cp example/index.html example/dist/index.html",
     "test": "karma start test/karma.conf.js --single-run",
     "test:watch": "karma start test/karma.conf.js",
-    "coverage": "cat test/coverage/lcov/lcov.info | coveralls"
+    "coverage": "cat ./coverage/lcov/lcov.info | coveralls"
   },
   "keywords": [
     "toasty",
