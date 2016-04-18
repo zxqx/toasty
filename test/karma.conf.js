@@ -6,14 +6,6 @@ module.exports = function(config) {
 
     frameworks: ['mocha', 'browserify'],
 
-    plugins: [
-      'karma-coverage',
-      'karma-mocha',
-      'karma-browserify',
-      'karma-chrome-launcher',
-      'karma-firefox-launcher'
-    ],
-
     files: [
       '../index.js',
       '../lib/*.js',
@@ -27,7 +19,7 @@ module.exports = function(config) {
     },
 
     browserify: {
-      transform: ['brfs', istanbul({
+      transform: [istanbul({
         instrumenterConfig: { embedSource: true }
       })]
     },
