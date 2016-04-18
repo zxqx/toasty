@@ -1,6 +1,6 @@
 {
   "name": "mk-toasty",
-  "version": "5.2.1",
+  "version": "5.3.0",
   "description": "Make the Mortal Kombat toasty guy pop out on your site.",
   "main": "index.js",
   "scripts": {
