@@ -77,15 +77,6 @@ describe('toasty setup', () => {
     return instance.trigger().then(() => sinon.assert.called(spy));
   });
 
-  it('should restore original body overflow-x value', () => {
-    let el = document.querySelector('.toasty');
-    let origOverflowX = document.body.style.overflowX;
-    return instance.trigger()
-      .then(() => {
-        expect(document.body.style.overflowX).to.eql(origOverflowX);
-      });
-  });
-
   it('should short circuit trigger if in progress', () => {
     instance.trigger();
     return expect(instance.trigger()).to.eventually.be.rejected;
