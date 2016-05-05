@@ -103,6 +103,33 @@ describe('toasty setup', () => {
     expect(instance.audio).to.be.null;
   });
 
+  it('should allow for multiple trigger elements', () => {
+    let container2 = document.createElement('div');
+    container2.classList.add('toasty');
+    let container3 = document.createElement('div');
+    container3.classList.add('toasty');
+    let container4 = document.createElement('div');
+    container4.classList.add('toasty');
+
+    document.body.appendChild(container2);
+    document.body.appendChild(container3);
+    document.body.appendChild(container4);
+
+    instance = toasty('.toasty');
+
+    let el = Array.from(document.querySelectorAll('.toasty'))[2];
+    let spy = sinon.spy(instance, 'slideIn');
+
+    el.click();
+    sinon.assert.called(spy);
+
+    document.body.removeChild(container2);
+    document.body.removeChild(container3);
+    document.body.removeChild(container4);
+
+    instance.destroy();
+  });
+
   it('should allow for multiple destroys', () => {
     instance.destroy();
     expect(instance.destroy.bind(instance)).to.not.throw(Error);
