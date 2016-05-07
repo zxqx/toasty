@@ -41,7 +41,7 @@ describe('toasty setup', () => {
     return instance.slideIn()
       .then(() => {
         let toastyGuy = document.querySelector('img');
-        expect(toastyGuy.style.right).to.eql('0px');
+        expect(toastyGuy.style.display).to.eql('block');
       });
   });
 
@@ -50,7 +50,7 @@ describe('toasty setup', () => {
       .then(() => instance.slideOut())
       .then(() => {
         let toastyGuy = document.querySelector('img');
-        expect(toastyGuy.style.right).to.not.eql('0px');
+        expect(toastyGuy.style.display).to.eql('none');
       });
   });
 
