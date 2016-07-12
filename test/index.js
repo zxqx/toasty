@@ -27,17 +27,17 @@ describe('toasty setup', () => {
     expect(instance instanceof Toasty).to.be.true;
   });
 
-  it('should add toasty audio', () => {
+  it('should add toasty audio to DOM', () => {
     let audio = document.querySelector('audio');
     expect(audio).to.be.an.instanceOf(HTMLElement);
   });
 
-  it('should add toasty guy', () => {
+  it('should add toasty guy to DOM', () => {
     let toastyGuy = document.querySelector('img');
     expect(toastyGuy).to.be.an.instanceOf(HTMLElement);
   });
 
-  it('should slide in toasty guy', () => {
+  it('should slide toasty guy into visible viewport', () => {
     return instance.slideIn()
       .then(() => {
         let toastyGuy = document.querySelector('img');
@@ -54,7 +54,7 @@ describe('toasty setup', () => {
       });
   });
 
-  it('should play audio when element is clicked', () => {
+  it('should play audio when trigger element is clicked', () => {
     let el = document.querySelector('.toasty');
     let spy = sinon.spy(instance, 'playAudio');
 
@@ -121,7 +121,8 @@ describe('toasty setup', () => {
     instance.destroy();
   });
 
-  it('should allow for multiple destroys', () => {
+  it('should not fail when destroy is called more than once', () => {
+    instance.destroy();
     instance.destroy();
     expect(instance.destroy.bind(instance)).to.not.throw(Error);
   });
